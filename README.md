@@ -1,0 +1,2 @@
+# React useEffect setInterval memory leak
+This example demonstrates a common mistake when using setInterval within the useEffect hook in React.  Forgetting to return a cleanup function from useEffect leads to a memory leak because the interval continues to run even after the component unmounts. This will cause the count to continue incrementing even when the component is no longer visible.  The solution shows how to fix this issue using a cleanup function that clears the interval before the component unmounts.
